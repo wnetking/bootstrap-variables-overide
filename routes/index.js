@@ -4,7 +4,7 @@ var cool = require('cool-ascii-faces');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express and Heroku' });
 });
 
 router.get('/cool', function (req, res, next) {

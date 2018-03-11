@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "h-push": "git push heroku master",
+    "h-open": "heroku open",
+    "h-local": "heroku local"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
