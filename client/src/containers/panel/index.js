@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import Button from "../../components/button";
-import "./style.css"
+import React, { Component } from 'react';
+import Button from '../../components/button';
+import './style.css';
 
 class Panel extends Component {
   render() {
@@ -8,40 +8,54 @@ class Panel extends Component {
       <section className="main-panel">
         <ul className="panel-numbers">
           <li>
-            <Button>7</Button>
+            <Button type="number">7</Button>
           </li>
           <li>
-            <Button>8</Button>
+            <Button type="number">8</Button>
           </li>
           <li>
-            <Button>9</Button>
+            <Button type="number">9</Button>
           </li>
           <li>
-            <Button>4</Button>
+            <Button type="number">4</Button>
           </li>
           <li>
-            <Button>5</Button>
+            <Button type="number">5</Button>
           </li>
           <li>
-            <Button>6</Button>
+            <Button type="number">6</Button>
           </li>
           <li>
-            <Button>1</Button>
+            <Button type="number">1</Button>
           </li>
           <li>
-            <Button>2</Button>
+            <Button type="number">2</Button>
           </li>
           <li>
-            <Button>3</Button>
-          </li>
-          <li>
-            <Button>+-</Button>
-          </li>
-          <li>
-            <Button>0</Button>
+            <Button type="number">3</Button>
           </li>
           <li>
             <Button>.</Button>
+          </li>
+          <li>
+            <Button type="number">0</Button>
+          </li>
+          <li>
+            <Button type="equally">=</Button>
+          </li>
+        </ul>
+        <ul className="panel-operations">
+          <li>
+            <Button type="operation">/</Button>
+          </li>
+          <li>
+            <Button type="operation">*</Button>
+          </li>
+          <li>
+            <Button type="operation">-</Button>
+          </li>
+          <li>
+            <Button type="operation">+</Button>
           </li>
         </ul>
       </section>

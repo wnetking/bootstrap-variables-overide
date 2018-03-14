@@ -1,8 +1,45 @@
-.btn{
-  padding: 40px;
+.btn {
+  position: relative;
+
   border-radius: 0;
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  color: #fff;
 }
 
-.btn:focus{
-  /* background-color: #cac */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus::before {
+  animation-name: zoom;
+  animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(4);
+    opacity: 1;
+  }
 }

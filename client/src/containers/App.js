@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Panel from './panel';
+import Display from '../components/display';
+
 import './App.css';
-import Panel from './panel'
-import Display from '../components/display'
 
 class App extends Component {
   render() {
+    let { input, result } = this.props.display;
     return (
       <div className="App">
-        <Display> 1 + 5</Display>
+        <Display input={input.join(' ')} result={result} />
         <Panel />
       </div>
     );
   }
 }
 
-export default App;
+let mapStateToProps = ({ display }) => ({
+  display: display
+});
+
+export default connect(mapStateToProps)(App);
